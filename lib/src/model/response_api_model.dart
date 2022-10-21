@@ -46,6 +46,7 @@ class ResponseApi {
   String? productApiUrl;
   String? apiFeaturedImage;
   List<ProductColor>? productColors;
+  var isFavorite = false;
 
   factory ResponseApi.fromJson(Map<String, dynamic> json) => ResponseApi(
         id: json["id"],
