@@ -1,9 +1,4 @@
-import 'package:delivery_application/routes/app_routes.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-import 'app/controller/cubit/get_post_fruits_controller_cubit.dart';
-import 'src/dependece/imports.dart';
+import 'imports.dart';
 import 'src/dependece/inject_dependeces.dart' as dependece;
 
 class AppWidget extends StatelessWidget {
@@ -20,7 +15,7 @@ class AppWidget extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         routes: AppRoutes.routes,
-        initialRoute: '/home',
+        initialRoute: '/',
       ),
     );
   }

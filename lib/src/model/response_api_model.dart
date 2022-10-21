@@ -11,8 +11,6 @@ class ResponseApi {
     this.id,
     this.name,
     this.price,
-    this.priceSign,
-    this.currency,
     this.imageLink,
     this.productLink,
     this.websiteLink,
@@ -25,14 +23,12 @@ class ResponseApi {
     this.updatedAt,
     this.productApiUrl,
     this.apiFeaturedImage,
-    this.productColors,
   });
 
   int? id;
   String? name;
   String? price;
-  dynamic? priceSign;
-  dynamic? currency;
+
   String? imageLink;
   String? productLink;
   String? websiteLink;
@@ -45,15 +41,11 @@ class ResponseApi {
   DateTime? updatedAt;
   String? productApiUrl;
   String? apiFeaturedImage;
-  List<ProductColor>? productColors;
-  var isFavorite = false;
 
   factory ResponseApi.fromJson(Map<String, dynamic> json) => ResponseApi(
         id: json["id"],
         name: json["name"],
         price: json["price"],
-        priceSign: json["price_sign"],
-        currency: json["currency"],
         imageLink: json["image_link"],
         productLink: json["product_link"],
         websiteLink: json["website_link"],
@@ -65,16 +57,12 @@ class ResponseApi {
         updatedAt: DateTime.parse(json["updated_at"]),
         productApiUrl: json["product_api_url"],
         apiFeaturedImage: json["api_featured_image"],
-        productColors: List<ProductColor>.from(
-            json["product_colors"].map((x) => ProductColor.fromJson(x))),
       );
 
   Map<String, dynamic> toJson() => {
         "id": id,
         "name": name,
         "price": price,
-        "price_sign": priceSign,
-        "currency": currency,
         "image_link": imageLink,
         "product_link": productLink,
         "website_link": websiteLink,
@@ -85,36 +73,7 @@ class ResponseApi {
         "tag_list": List<dynamic>.from(tagList!.map((x) => x)),
         "product_api_url": productApiUrl,
         "api_featured_image": apiFeaturedImage,
-        "product_colors":
-            List<dynamic>.from(productColors!.map((x) => x.toJson())),
       };
 }
 
-class ProductColor {
-  ProductColor({
-    this.hexValue,
-    this.colourName,
-  });
 
-  String? hexValue;
-  String? colourName;
-
-  ProductColor copyWith({
-    String? hexValue,
-    String? colourName,
-  }) =>
-      ProductColor(
-        hexValue: hexValue ?? this.hexValue,
-        colourName: colourName ?? this.colourName,
-      );
-
-  factory ProductColor.fromJson(Map<String, dynamic> json) => ProductColor(
-        hexValue: json["hex_value"],
-        colourName: json["colour_name"],
-      );
-
-  Map<String, dynamic> toJson() => {
-        "hex_value": hexValue,
-        "colour_name": colourName,
-      };
-}
