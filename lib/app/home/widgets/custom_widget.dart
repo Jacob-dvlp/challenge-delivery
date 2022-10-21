@@ -11,7 +11,7 @@ class CustomWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
         child: GridView.builder(
       itemCount: responseApi.length,
       gridDelegate: SliverQuiltedGridDelegate(
@@ -29,6 +29,7 @@ class CustomWidget extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.all(7.0),
           child: Card(
+          
             elevation: 5,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
@@ -43,7 +44,7 @@ class CustomWidget extends StatelessWidget {
                     ),
                     child: ImageNetwork(
                       image: product.imageLink!,
-                      height: MediaQuery.of(context).size.height / 9,
+                      height: MediaQuery.of(context).size.height/9.4,
                       width: MediaQuery.of(context).size.width,
                     ),
                   ),
@@ -62,8 +63,8 @@ class CustomWidget extends StatelessWidget {
                         color: Colors.green,
                         borderRadius: BorderRadius.circular(12),
                       ),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 4, vertical: 2),
+                      padding:
+                          const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
@@ -81,8 +82,7 @@ class CustomWidget extends StatelessWidget {
                     ),
                   const SizedBox(height: 8),
                   Text('\$${product.price}',
-                      style:
-                          const TextStyle(fontSize: 32, fontFamily: 'avenir')),
+                      style: const TextStyle(fontSize: 32, fontFamily: 'avenir')),
                 ],
               ),
             ),
