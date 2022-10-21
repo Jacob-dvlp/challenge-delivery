@@ -1,8 +1,8 @@
+import 'package:delivery_application/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'app/controller/cubit/get_post_fruits_controller_cubit.dart';
-import 'app/home/home_page.dart';
 import 'src/dependece/imports.dart';
 import 'src/dependece/inject_dependeces.dart' as dependece;
 
@@ -17,9 +17,10 @@ class AppWidget extends StatelessWidget {
           create: (_) => dependece.getIt<GetPostFruitsControllerCubit>(),
         ),
       ],
-      child: const MaterialApp(
+      child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: HomePage(),
+        routes: AppRoutes.routes,
+        initialRoute: '/home',
       ),
     );
   }
