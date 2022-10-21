@@ -1,13 +1,7 @@
-import 'dart:io';
 
-import 'package:equatable/equatable.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../../src/dependece/imports.dart';
-import '../../../src/model/response_api_model.dart';
+import 'imports.dart';
 
 part 'get_post_fruits_controller_state.dart';
-
 class GetPostFruitsControllerCubit extends Cubit<GetPostFruitsControllerState> {
   final GetPostFruitsProviderInterface fruitsProvider;
 
