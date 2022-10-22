@@ -38,7 +38,7 @@ class Produts extends StatelessWidget {
                   fontFamily: 'avenir', fontWeight: FontWeight.w800),
               overflow: TextOverflow.ellipsis,
             ),
-            const SizedBox(height: 8),
+            const SizedBox(height: 5),
             if (product.rating != null)
               Container(
                 decoration: BoxDecoration(
@@ -61,9 +61,9 @@ class Produts extends StatelessWidget {
                   ],
                 ),
               ),
-            const SizedBox(height: 8),
+            const SizedBox(height: 5),
             Text('\$${product.price}',
-                style: const TextStyle(fontSize: 32, fontFamily: 'avenir')),
+                style: const TextStyle(fontSize: 20, fontFamily: 'avenir')),
           ],
         ),
       ),
