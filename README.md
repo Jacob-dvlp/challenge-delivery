@@ -1,7 +1,9 @@
 ## Deliver app
-#Este projeto  foi criando com com objectivo de mostrar como  podemos usar #Cubit do <a href="https://pub.dev/packages/flutter_bloc">Bloc</a> para gerenciamento de estádo   dentro do app e tambémm  foi usado o package <a href="https://pub.dev/packages/get_it">Getit</a> para injeção de dependencias do aplicativo e também foi usado os conceitos de SOLID.
+#Este projeto  foi criando com com objectivo de mostrar como  podemos usar #Cubit do <a href="https://pub.dev/packages/flutter_bloc">Bloc</a> para gerenciamento de estádo   dentro do app. E usei  o package <a href="https://pub.dev/packages/get_it">Getit</a> para injeção de dependencias do aplicativo e sem esquecer que foi aplicado os conceitos de SOLID dentro do applicativo.
 
-![cap](https://github.com/Jacob-dvlp/challenge-delivery/blob/master/cap.jpg)<br>
+ 
+
+![cap](https://github.com/Jacob-dvlp/challenge-delivery/blob/master/cap.jpg)
 
 
 ![cap](https://github.com/Jacob-dvlp/challenge-delivery/blob/master/cap2.jpg)
