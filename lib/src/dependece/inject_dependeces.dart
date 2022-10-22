@@ -3,11 +3,11 @@ import 'imports.dart';
 final getIt = GetIt.instance;
 
 initInject() {
-  getIt.registerLazySingleton<HttpService>(
+  getIt.registerFactory<HttpService>(
     () => HttpServicesImplement(),
   );
 
-  getIt.registerFactory(
+  getIt.registerLazySingleton(
     () => GetPostFruitsControllerCubit(
       fruitsProvider: getIt.call(),
     ),
