@@ -12,7 +12,6 @@ class GetPostFruitsRepositoryImp implements GetPostFruitsInterface {
     final model = response.body;
     final convert = responseApiFromJson(model);
     produtos = convert;
-    print(produtos);
     return produtos;
   }
 }
